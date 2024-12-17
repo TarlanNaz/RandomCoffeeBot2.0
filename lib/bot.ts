@@ -90,7 +90,8 @@ bot.on("message", async (ctx) => {
         ctx.reply("Я не знаю, как на это ответить. Пожалуйста, используйте команду /register для начала.");  
     }  
 });  
-
+// Обработайте другие сообщения.
+bot.on("message", (ctx) => ctx.reply("Получил ваше сообщение: " + ctx.message.text + " !",));
 // Функция для поиска совпадений  
 async function findMatches(userId: string) {  
     const user = users[userId];  
