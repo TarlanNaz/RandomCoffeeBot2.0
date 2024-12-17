@@ -7,6 +7,7 @@ export const bot = new Bot(Deno.env.get("BOT_TOKEN") || ""); // Убедитес
 const userState: { [userId: string]: { hobby: string; place: string; cafe: string; time: string; meetNumber: number; grade: Array<number>; waitingForResponse?: boolean; otherUserId?: string; agreed?: boolean; } } = {};  
 const users: { [userId: string]: { hobby: string; place: string; cafe: string; time: string; meetNumber: number; grade: Array<number>; } } = {}; // Хранение всех зарегистрированных пользователей   
 
+
 // Команды для регистрации  
 bot.command("start", (ctx) => {  
     ctx.reply("Добро пожаловать! Чтобы начать регистрацию, введите /register.");  
